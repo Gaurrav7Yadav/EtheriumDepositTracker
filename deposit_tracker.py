@@ -1,3 +1,4 @@
+# It runs perfectly so have fun with it Gaurav Yadav
 from web3 import Web3
 import json
 import logging
@@ -6,8 +7,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Connect to an Ethereum node (using Infura, Alchemy, or a local node)
-# Replace with your Infura/Alchemy Project ID
+# Connect to an Ethereum node YOU CAN REPLACE YOUR OWN INFURA API KEY HERE
 infura_url = "https://mainnet.infura.io/v3/1bcfde3dc4ca43f7b39d998c63efbdff"
 web3 = Web3(Web3.HTTPProvider(infura_url))
 
@@ -18,7 +18,7 @@ else:
     logger.error("Failed to connect to Ethereum node")
     exit(1)
 
-# ABI for the Deposit Contract (replace with your ABI)
+# ABI for the Deposit Contract
 contract_abi = '''
 [
 	{
@@ -142,10 +142,9 @@ contract_abi = '''
 # Address of the Beacon Deposit Contract
 contract_address = "0x00000000219ab540356cBB839Cbe05303d7705Fa"
 
-# Create contract instance
 deposit_contract = web3.eth.contract(address=contract_address, abi=contract_abi)
 
-# Function to process DepositEvent
+# DepositEvent Process
 def handle_deposit_event(event):
     logger.info("Deposit Event Detected")
     logger.info(f"Pubkey: {event['args']['pubkey'].hex()}")
@@ -163,7 +162,6 @@ def monitor_deposits():
         for event in deposit_event_filter.get_new_entries():
             handle_deposit_event(event)
         
-        # Polling interval (in seconds)
         web3.middleware_onion.sleep(10)
 
 if __name__ == "__main__":
