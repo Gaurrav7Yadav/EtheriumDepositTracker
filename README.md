@@ -19,8 +19,8 @@ This repository contains two main components for tracking Ethereum deposits:
 ## DepositContract.sol
 ### Overview
 `DepositContract.sol` is a Solidity smart contract designed to handle Ethereum 2.0 deposit events. It provides the following functionalities:
-- **DepositEvent**: Logs deposit events with details such as public key, withdrawal credentials, amount, signature, and index.
-- **deposit**: Allows users to make deposits and emits `DepositEvent`.
+- **DepositEvent: Logs deposit events with details such as public key, withdrawal credentials, amount, signature, and index.
+- **deposit: Allows users to make deposits and emits `DepositEvent`.
 - **get_deposit_count**: Returns the current count of deposits.
 - **get_deposit_root**: Returns the current deposit root hash.
 - **supportsInterface**: Checks if the contract supports a specific interface.
