@@ -25,12 +25,13 @@ This repository contains two main components for tracking Ethereum deposits:
 - **get_deposit_root**: Returns the current deposit root hash.
 - **supportsInterface**: Checks if the contract supports a specific interface.
 
-###deposit_tracker.py is a Python script that monitors deposit events from the Ethereum Beacon Deposit Contract using the Web3.py library. It performs the following tasks:
+## Deposit_tracker.py 
+It is a Python script that monitors deposit events from the Ethereum Beacon Deposit Contract using the Web3.py library. It performs the following tasks:
 
 - **Connects to an Ethereum Node: Uses Infura or another Ethereum node provider.
 - **Interacts with the Deposit Contract: Listens for DepositEvent logs from the contract.
 - **Processes Deposit Events: Logs event details such as public key, withdrawal credentials, amount, signature, and index.
-###Requirements
-##Before running the script, make sure you have the following installed:
+## Requirements
+### Before running the script, make sure you have the following installed:
 - **Python 3.x
 - **web3 library
