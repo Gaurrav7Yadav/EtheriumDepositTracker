@@ -1,4 +1,4 @@
-# It runs perfectly so have fun with it Gaurav Yadav
+# It runs perfectly so have fun with it, by Gaurav Yadav
 from web3 import Web3
 import json
 import logging
